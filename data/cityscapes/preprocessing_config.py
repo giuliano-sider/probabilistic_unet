@@ -14,8 +14,11 @@
 # ==============================================================================
 """Cityscapes preprocessing config."""
 
-raw_data_dir = 'SET_INPUT_DIRECTORY_ABSOLUTE_PATH_HERE'
-out_dir = 'SET_OUTPUT_DIRECTORY_ABSOLUTE_PATH_HERE'
+import os
+
+raw_data_dir = os.path.join(os.path.abspath(os.path.dirname(__file__)), '') # 'SET_INPUT_DIRECTORY_ABSOLUTE_PATH_HERE'
+out_dir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'output') # 'SET_OUTPUT_DIRECTORY_ABSOLUTE_PATH_HERE'
+print(raw_data_dir, out_dir)
 
 # settings:
 settings = {

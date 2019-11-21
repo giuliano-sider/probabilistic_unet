@@ -297,7 +297,7 @@ def create_data_gen_pipeline(cf, cities=None, data_split='train', do_aug=True, r
                               gt_instances=cf.gt_instances, n_batches=n_batches, random=random)
     my_transforms = []
     if do_aug:
-        mirror_transform = MirrorTransform(axes=(3,))
+        mirror_transform = MirrorTransform(axes=(1,))
         my_transforms.append(mirror_transform)
         spatial_transform = SpatialTransform(patch_size=cf.patch_size[-2:],
                                              patch_center_dist_from_border=cf.da_kwargs['rand_crop_dist'],

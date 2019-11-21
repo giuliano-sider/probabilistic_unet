@@ -25,7 +25,7 @@ config_path = os.path.realpath(__file__)
 #             data-loader    			#
 #########################################
 
-data_dir = 'PREPROCESSING_OUTPUT_DIRECTORY_ABSOLUTE_PATH'
+data_dir = os.path.join(os.path.abspath(os.path.dirname(__file__)), os.pardir, 'data', 'cityscapes', 'output') # 'PREPROCESSING_OUTPUT_DIRECTORY_ABSOLUTE_PATH'
 resolution = 'quarter'
 label_density = 'gtFine'
 gt_instances = False
@@ -124,4 +124,4 @@ use_posterior_mean = False
 save_every_n_steps = n_training_batches // 3 if n_training_batches >= 100000 else n_training_batches
 disable_progress_bar = False
 
-exp_dir = "EXPERIMENT_OUTPUT_DIRECTORY_ABSOLUTE_PATH"
+exp_dir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'output') # "EXPERIMENT_OUTPUT_DIRECTORY_ABSOLUTE_PATH"

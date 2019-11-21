@@ -24,6 +24,9 @@ import logging
 import argparse
 from importlib.machinery import SourceFileLoader
 
+import sys
+# sys.path += os.path.join(os.path.abspath(os.path.dirname(__file__)), os.pardir)
+sys.path += os.pardir
 from data.cityscapes.data_loader import get_train_generators
 from model.probabilistic_unet import ProbUNet
 import utils.training_utils as training_utils
